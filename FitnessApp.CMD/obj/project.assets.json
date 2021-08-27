@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "FitnessApp.BL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/FitnessApp.BL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FitnessApp.BL.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "FitnessApp.BL/1.0.0": {
+      "type": "project",
+      "path": "../FitnessApp.BL/FitnessApp.BL.csproj",
+      "msbuildProject": "../FitnessApp.BL/FitnessApp.BL.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "FitnessApp.BL >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Nikita\\.nuget\\packages\\": {}
@@ -31,7 +50,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Projects\\github\\FitnessApp\\FitnessApp.BL\\FitnessApp.BL.csproj": {
+              "projectPath": "D:\\Projects\\github\\FitnessApp\\FitnessApp.BL\\FitnessApp.BL.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

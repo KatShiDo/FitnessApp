@@ -2,6 +2,7 @@
 
 namespace FitnessApp.BL.Model
 {
+    [Serializable]
     public class Gender
     {
         private string Name { get; }
