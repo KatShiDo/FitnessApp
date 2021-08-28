@@ -7,13 +7,15 @@ namespace FitnessApp.BL.Model
     {
         public string Name { get; }
 
-        public Gender Gender { get; }
+        public Gender Gender { get; set; }
 
-        public DateTime BirthDate { get; }
+        public DateTime BirthDate { get; set; }
 
         public double Weight { get; set; }
 
         public double Height { get; set; }
+
+        public int Age => DateTime.Now.Year - BirthDate.Year;
 
         public User(string name, Gender gender, DateTime birthDate, double weight, double height)
         {
@@ -48,9 +50,19 @@ namespace FitnessApp.BL.Model
             Height = height;
         }
 
+        public User(string name)
+        {
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                throw new ArgumentNullException(nameof(name), "User name cannot be empty");
+            }
+
+            Name = name;
+        }
+
         public override string ToString()
         {
-            return Name;
+            return Name + " " + Age;
         }
     }
 }
