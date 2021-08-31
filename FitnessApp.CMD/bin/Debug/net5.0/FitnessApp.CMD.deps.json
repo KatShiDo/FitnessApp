@@ -12,6 +12,14 @@
         },
         "runtime": {
           "FitnessApp.CMD.dll": {}
+        },
+        "resources": {
+          "en/FitnessApp.CMD.resources.dll": {
+            "locale": "en"
+          },
+          "ru/FitnessApp.CMD.resources.dll": {
+            "locale": "ru"
+          }
         }
       },
       "FitnessApp.BL/1.0.0": {

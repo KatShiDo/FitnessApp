@@ -17,3 +17,13 @@ D:\Projects\github\FitnessApp\FitnessApp.CMD\obj\Debug\net5.0\FitnessApp.CMD.dll
 D:\Projects\github\FitnessApp\FitnessApp.CMD\obj\Debug\net5.0\ref\FitnessApp.CMD.dll
 D:\Projects\github\FitnessApp\FitnessApp.CMD\obj\Debug\net5.0\FitnessApp.CMD.pdb
 D:\Projects\github\FitnessApp\FitnessApp.CMD\obj\Debug\net5.0\FitnessApp.CMD.genruntimeconfig.cache
+D:\Projects\github\FitnessApp\FitnessApp.CMD\bin\Debug\net5.0\en\FitnessApp.CMD.resources.dll
+D:\Projects\github\FitnessApp\FitnessApp.CMD\bin\Debug\net5.0\ru\FitnessApp.CMD.resources.dll
+D:\Projects\github\FitnessApp\FitnessApp.CMD\obj\Debug\net5.0\FitnessApp.CMD.Languages.Messages.resources
+D:\Projects\github\FitnessApp\FitnessApp.CMD\obj\Debug\net5.0\FitnessApp.CMD.Languages.Messages.en.resources
+D:\Projects\github\FitnessApp\FitnessApp.CMD\obj\Debug\net5.0\FitnessApp.CMD.Languages.Messages.ru.resources
+D:\Projects\github\FitnessApp\FitnessApp.CMD\obj\Debug\net5.0\FitnessApp.CMD.csproj.GenerateResource.cache
+D:\Projects\github\FitnessApp\FitnessApp.CMD\obj\Debug\net5.0\en\FitnessApp.CMD.resources.cs
+D:\Projects\github\FitnessApp\FitnessApp.CMD\obj\Debug\net5.0\en\FitnessApp.CMD.resources.dll
+D:\Projects\github\FitnessApp\FitnessApp.CMD\obj\Debug\net5.0\ru\FitnessApp.CMD.resources.cs
+D:\Projects\github\FitnessApp\FitnessApp.CMD\obj\Debug\net5.0\ru\FitnessApp.CMD.resources.dll
