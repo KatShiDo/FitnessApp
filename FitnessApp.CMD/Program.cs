@@ -19,12 +19,13 @@ namespace FitnessApp.CMD
             
             var userController = new UserController(name);
             var eatingController = new EatingController(userController.CurrentUser);
+            var exerciseController = new ExerciseController(userController.CurrentUser);
 
             if (userController.IsNewUser)
             {
                 Console.Write(resourceManager.GetString("EnterGender", culture));
                 var gender = Console.ReadLine();
-                var birthDate = ParseDateTime();
+                var birthDate = ParseDateTime("user's birth date");
                 var weight = ParseDouble("weight");
                 var height = ParseDouble("height");
 
@@ -33,20 +34,54 @@ namespace FitnessApp.CMD
 
             Console.WriteLine(userController.CurrentUser);
 
-            Console.WriteLine("Choose action\nE - enter eating");
-            var key = Console.ReadKey();
-            Console.WriteLine();
-
-            if (key.Key == ConsoleKey.E)
+            while (true)
             {
-                var foods = EnterEating();
-                eatingController.Add(foods.Food, foods.Weight);
-
-                foreach (var item in eatingController.Eating.Foods)
+                Console.WriteLine("Choose action\nE - enter eating\nA - enter exercise\n" +
+                                  "Q - quit");
+                var key = Console.ReadKey();
+                Console.WriteLine();
+                
+                switch (key.Key)
                 {
-                    Console.WriteLine($"\t{item.Key} - {item.Value}");
+                    case ConsoleKey.E:
+                        var foods = EnterEating();
+                        eatingController.Add(foods.Food, foods.Weight);
+
+                        foreach (var item in eatingController.Eating.Foods)
+                        {
+                            Console.WriteLine($"\t{item.Key} - {item.Value}");
+                        }
+                        break;
+                    case ConsoleKey.A:
+                        var exe = EnterExercise();
+                        exerciseController.Add(exe.Activity, exe.Begin, exe.End);
+
+                        foreach (var item in exerciseController.Exercises)
+                        {
+                            Console.WriteLine($"\t{item.Activity} from {item.Start.ToShortTimeString()}" +
+                                              $" to {item.Finish.ToShortTimeString()}");
+                        }
+                        
+                        break;
+                    case ConsoleKey.Q:
+                        Environment.Exit(0);
+                        break;
                 }
             }
+        }
+
+        private static (DateTime Begin, DateTime End, Activity Activity) EnterExercise()
+        {
+            Console.WriteLine("Enter the name of exercise: ");
+            var name = Console.ReadLine();
+
+            var energy = ParseDouble("energy consumption per minute");
+
+            var begin = ParseDateTime("exercise start time");
+            var end = ParseDateTime("exercise end time");
+
+            var activity = new Activity(name, energy);
+            return new (begin, end, activity);
         }
 
         private static (Food Food, double Weight) EnterEating()
@@ -65,12 +100,12 @@ namespace FitnessApp.CMD
             return (product, weight);
         }
 
-        private static DateTime ParseDateTime()
+        private static DateTime ParseDateTime(string value)
         {
             DateTime birthDate;
             while (true)
             {
-                Console.Write("Enter user's birth date (DD.MM.YYYY): ");
+                Console.Write($"Enter {value} (DD.MM.YYYY): ");
                 if (DateTime.TryParse(Console.ReadLine(), out birthDate))
                 {
                     break;
