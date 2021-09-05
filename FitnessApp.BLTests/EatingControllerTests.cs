@@ -22,7 +22,7 @@ namespace FitnessApp.BLTests
 
             eatingController.Add(food, 100);
             
-            Assert.AreEqual(food.Name, eatingController.Eating.Foods.First().Key.Name);
+            Assert.AreEqual(food.Name, eatingController.Eating.Foods.Last().Key.Name);
         }
     }
 }

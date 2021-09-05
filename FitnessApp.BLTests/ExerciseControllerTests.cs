@@ -21,7 +21,7 @@ namespace FitnessApp.BLTests
 
             exerciseController.Add(activity, DateTime.Now, DateTime.Now.AddHours(1));
             
-            Assert.AreEqual(activityName, exerciseController.Activities.First().Name);
+            Assert.AreEqual(activityName, exerciseController.Activities.Last().Name);
         }
     }
 }

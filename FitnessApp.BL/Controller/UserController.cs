@@ -10,8 +10,6 @@ namespace FitnessApp.BL.Controller
 {
     public class UserController : ControllerBase
     {
-        private const string USERS_FILE_NAME = "users.dat";
-        
         public List<User> Users { get; }
         
         public User CurrentUser { get; }
@@ -34,18 +32,17 @@ namespace FitnessApp.BL.Controller
                 CurrentUser = new User(userName);
                 Users.Add(CurrentUser);
                 IsNewUser = true;
-                Save();
             }
         }
 
         public void Save()
         {
-            Save(USERS_FILE_NAME, Users);
+            Save(Users);
         }
 
         private List<User> GetUsersData()
         {
-            return Load<List<User>>(USERS_FILE_NAME) ?? new List<User>();
+            return Load<User>() ?? new List<User>();
         }
 
         public void SetNewUserData(string genderName, DateTime birthDate, double weight = 1, double height = 1)

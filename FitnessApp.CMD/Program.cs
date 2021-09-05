@@ -18,9 +18,7 @@ namespace FitnessApp.CMD
             var name = Console.ReadLine();
             
             var userController = new UserController(name);
-            var eatingController = new EatingController(userController.CurrentUser);
-            var exerciseController = new ExerciseController(userController.CurrentUser);
-
+            
             if (userController.IsNewUser)
             {
                 Console.Write(resourceManager.GetString("EnterGender", culture));
@@ -31,6 +29,9 @@ namespace FitnessApp.CMD
 
                 userController.SetNewUserData(gender, birthDate, weight, height);
             }
+            
+            var eatingController = new EatingController(userController.CurrentUser);
+            var exerciseController = new ExerciseController(userController.CurrentUser);
 
             Console.WriteLine(userController.CurrentUser);
 

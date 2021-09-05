@@ -1,21 +1,35 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace FitnessApp.BL.Model
 {
     [Serializable]
     public class User
     {
-        public string Name { get; }
+        public int Id { get; set; }
+        
+        public string Name { get; set; }
+        
+        public int? GenderId { get; set; }
 
-        public Gender Gender { get; set; }
+        public virtual Gender Gender { get; set; }
 
-        public DateTime BirthDate { get; set; }
+        public DateTime BirthDate { get; set; } = DateTime.Now;
 
         public double Weight { get; set; }
 
         public double Height { get; set; }
 
+        public virtual ICollection<Eating> Eatings { get; set; }
+        
+        public virtual ICollection<Exercise> Exercises { get; set; }
+
         public int Age => DateTime.Now.Year - BirthDate.Year;
+
+        public User()
+        {
+        }
 
         public User(string name, Gender gender, DateTime birthDate, double weight, double height)
         {
