@@ -1,0 +1,15 @@
+D:\Projects\github\FitnessApp\FitnessApp.BL\bin\Release\net5.0\FitnessApp.BL.deps.json
+D:\Projects\github\FitnessApp\FitnessApp.BL\bin\Release\net5.0\FitnessApp.BL.runtimeconfig.json
+D:\Projects\github\FitnessApp\FitnessApp.BL\bin\Release\net5.0\FitnessApp.BL.runtimeconfig.dev.json
+D:\Projects\github\FitnessApp\FitnessApp.BL\bin\Release\net5.0\FitnessApp.BL.dll
+D:\Projects\github\FitnessApp\FitnessApp.BL\bin\Release\net5.0\ref\FitnessApp.BL.dll
+D:\Projects\github\FitnessApp\FitnessApp.BL\bin\Release\net5.0\FitnessApp.BL.pdb
+D:\Projects\github\FitnessApp\FitnessApp.BL\obj\Release\net5.0\FitnessApp.BL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\github\FitnessApp\FitnessApp.BL\obj\Release\net5.0\FitnessApp.BL.AssemblyInfoInputs.cache
+D:\Projects\github\FitnessApp\FitnessApp.BL\obj\Release\net5.0\FitnessApp.BL.AssemblyInfo.cs
+D:\Projects\github\FitnessApp\FitnessApp.BL\obj\Release\net5.0\FitnessApp.BL.csproj.CoreCompileInputs.cache
+D:\Projects\github\FitnessApp\FitnessApp.BL\obj\Release\net5.0\FitnessApp.BL.dll
+D:\Projects\github\FitnessApp\FitnessApp.BL\obj\Release\net5.0\ref\FitnessApp.BL.dll
+D:\Projects\github\FitnessApp\FitnessApp.BL\obj\Release\net5.0\FitnessApp.BL.pdb
+D:\Projects\github\FitnessApp\FitnessApp.BL\obj\Release\net5.0\FitnessApp.BL.genruntimeconfig.cache
+D:\Projects\github\FitnessApp\FitnessApp.BL\obj\Release\net5.0\FitnessApp.BL.csproj.AssemblyReference.cache

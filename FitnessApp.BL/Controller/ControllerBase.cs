@@ -7,7 +7,7 @@ namespace FitnessApp.BL.Controller
 {
     public abstract class ControllerBase
     {
-        private IDataSaver manager = new DatabaseDataSaver();
+        private IDataSaver manager = new DatabaseSaver();
 
         protected void Save<T>(List<T> item) where T : class
         {
